@@ -3,11 +3,7 @@ const baseURL = "demo.nyxx-intel.com";
 const routes = {
   "/": true,
   "/about": true,
-  "/work": false,
-  "/blog": true,
-  "/gallery": false,
-  "/login": true,
-  "/dashboard": true,
+  "/contact": true
 };
 
 // Enable password protection on selected routes

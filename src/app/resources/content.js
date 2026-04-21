@@ -1,61 +1,62 @@
 import { InlineCode } from "@/once-ui/components";
 
 const person = {
-  firstName: "Nyxx",
-  lastName: "Intel",
+  firstName: "F & T Media",
+  lastName: "",
   get name() {
-    return `${this.firstName} ${this.lastName}`;
+    return this.firstName;
   },
-  role: "Mastering the Unknowns with NyxxIntel",
+  role: "Building Digital Presence That Stands Out",
   avatar: "/images/LOGO.png",
-  location: "Asia/Kolkata", 
-  languages: [], 
+
+  // 🔴 IMPORTANT: keep these separate
+  location: "Global",        // Display only
+  timeZone: "UTC",           // Used in Header.tsx (fixes your error)
+
+  languages: [],
 };
 
 const newsletter = {
   display: true,
-  title: <>Subscribe to {person.firstName} {person.lastName}'s Newsletter</>,
+  title: <>Subscribe to {person.name}'s Newsletter</>,
   description: (
     <>
-      We occasionally write about threat Intelligence share thoughts on upcoming cybersecurity news.
+      We share insights on digital portfolios, branding strategies, and building a powerful online presence.
     </>
   ),
 };
 
 const social = [
-  // Links are automatically displayed.
-  // Import new icons in /once-ui/icons.ts
-  // {
-  //   name: "GitHub",
-  //   icon: "github",
-  //   link: "https://github.com/NyxxIntel",
-  // },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/in/nyxx-intel-01351034b/",
+    link: "https://www.linkedin.com/", // 🔁 UPDATE
   },
+  // Add more later
   // {
-  //   name: "X",
-  //   icon: "x",
+  //   name: "Instagram",
+  //   icon: "instagram",
   //   link: "",
   // },
   // {
   //   name: "Email",
   //   icon: "email",
-  //   link: "nyxxintel@gmail.com",
+  //   link: "",
   // },
 ];
 
 const home = {
   label: "Home",
   title: `${person.name}`,
-  description: `Mastering the Unknowns with NyxxIntel`,
-  headline: <>Mastering the Unknowns with NyxxIntel</>,
+  description: `Building Digital Presence That Stands Out`,
+  headline: <>Build Your Digital Identity with F & T Media</>,
   subline: (
     <>
-      We offer a robust suite of <InlineCode>Threat Intelligence</InlineCode> solutions designed to protect organizations from today's complex and evolving cyber threats. Through real-time intelligence feeds, dark web monitoring, attack surface management, and third-party risk assessments, we enable proactive detection and mitigation of emerging risks.
-      <br /> Our services monitor illicit online communities, digital assets, and vendor ecosystems to uncover stolen data, vulnerabilities, and potential attack vectors before they can be exploited. Stay Ahead of Threats, and Secure What Matters Most.
+      We specialize in creating impactful <InlineCode>Digital Portfolio</InlineCode> for individuals, brands, and businesses.
+      <br />
+      From personal branding to company showcases, we design modern, high-performing websites that reflect your identity and value.
+      <br />
+      Stand out, build credibility, and grow your presence online with us.
     </>
   ),
 };
@@ -63,7 +64,7 @@ const home = {
 const about = {
   label: "About",
   title: "About us",
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  description: `Meet ${person.name}, ${person.role}`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -73,118 +74,89 @@ const about = {
   },
   calendar: {
     display: true,
-    link: "https://cal.com/nyxxintel-xcre0b",
+    link: "https://cal.com/", // 🔁 UPDATE
   },
   intro: {
     display: true,
     title: "Introduction",
     description: (
       <>
-        To empower organizations with actionable threat intelligence, enabling proactive defense strategies, reducing risk, 
-        and safeguarding digital assets from evolving cyber threats. To be the global leader in cybersecurity threat intelligence, 
-        transforming the way businesses understand, anticipate, and combat cyber risks. Our goal is to foster a more secure digital ecosystem,
-        enabling organizations to operate with confidence and resilience.
+        At F & T Media, we help individuals and brands build strong digital identities through modern portfolio experiences.
+        <br />
+        Our focus is on crafting visually compelling, strategically structured websites that communicate your story effectively.
+        <br />
+        We aim to empower you with a digital presence that builds trust, attracts opportunities, and drives growth.
       </>
     ),
   },
+
   servicesWeOffer: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Services We Offer",
     experiences: [
       {
-        company: "Threat Intelligence Feeds",
+        company: "Personal Portfolio Development",
         timeframe: "",
         role: "",
         achievements: [
-          <>
-            Real-time, actionable threat intelligence on emerging cyber threats, vulnerabilities, and attack tactics.
-          </>,
-        ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          // {
-          //   src: "/images/projects/project-01/cover-01.jpg",
-          //   alt: "Once UI Project",
-          //   width: 16,
-          //   height: 9,
-          // },
-        ],
-      },
-      {
-        company: "Geopolitical-Cyber Threat Insights",
-        timeframe: "",
-        role: "",
-        achievements: [
-          <>
-            In-depth analysis of the intersection between geopolitical events and cyber threats, including region-specific risks.
-          </>,
-          
+          <>Custom-designed portfolios for professionals, creators, and freelancers.</>,
         ],
         images: [],
       },
       {
-        company: "Managed Threat Intelligence Platform (TIP)",
+        company: "Brand Identity & Digital Presence",
         timeframe: "",
         role: "",
         achievements: [
-          <>
-            A comprehensive platform that centralizes threat intelligence, integrates with existing security tools, and automates threat response.
-          </>,
-          
+          <>Building cohesive and impactful digital identities for brands and businesses.</>,
+        ],
+        images: [],
+      },
+      {
+        company: "Website Design & Development",
+        timeframe: "",
+        role: "",
+        achievements: [
+          <>Modern, responsive websites optimized for performance and storytelling.</>,
+        ],
+        images: [],
+      },
+      {
+        company: "Content & Visual Strategy",
+        timeframe: "",
+        role: "",
+        achievements: [
+          <>Strategic content and design planning to maximize engagement and clarity.</>,
         ],
         images: [],
       },
     ],
   },
+
   studies: {
-    display: true, // set to false to hide this section
+    display: false, // Hidden (not relevant)
     title: "Studies",
-    institutions: [
-      {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
-      },
-      {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
-      },
-    ],
+    institutions: [],
   },
+
   technical: {
-    display: true, // set to false to hide this section
-    title: "Technical skills",
+    display: true,
+    title: "Capabilities",
     skills: [
       {
-        title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        title: "UI/UX Design",
+        description: <>Designing clean, intuitive, and visually engaging user experiences.</>,
+        images: [],
       },
       {
-        title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        title: "Web Development",
+        description: <>Building fast and scalable websites using modern frameworks.</>,
+        images: [],
+      },
+      {
+        title: "Brand Strategy",
+        description: <>Helping brands define and communicate their identity clearly.</>,
+        images: [],
       },
     ],
   },
@@ -192,128 +164,80 @@ const about = {
 
 const blog = {
   label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
+  title: "Insights on Digital Presence & Branding",
+  description: `Thoughts and ideas from ${person.name}`,
 };
 
 const servicesWeOffer = {
   label: "Work",
-  title: "My projects",
-  description: `Design and dev projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
-  // All projects will be listed on the /home and /work routes
+  title: "Our Projects",
+  description: `Portfolio and client work by ${person.name}`,
 };
 
 const gallery = {
   label: "Gallery",
-  title: "My photo gallery",
-  description: `A photo collection by ${person.name}`,
-  // Images from https://pexels.com
+  title: "Our Work Showcase",
+  description: `A collection of projects by ${person.name}`,
   images: [
     {
       src: "/images/gallery/img-01.jpg",
-      alt: "image",
+      alt: "project",
       orientation: "vertical",
     },
     {
       src: "/images/gallery/img-02.jpg",
-      alt: "image",
+      alt: "project",
       orientation: "horizontal",
     },
     {
       src: "/images/gallery/img-03.jpg",
-      alt: "image",
+      alt: "project",
       orientation: "vertical",
     },
     {
       src: "/images/gallery/img-04.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-05.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-06.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-07.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-08.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-09.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-10.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-11.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-12.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-13.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-14.jpg",
-      alt: "image",
+      alt: "project",
       orientation: "horizontal",
     },
   ],
 };
 
 const login = {
-  label: "Login",
-  title: "Login",
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  label: "Contact",
+  title: "Get in Touch",
+  description: `Connect with ${person.name}`,
   tableOfContent: {
-    display: true,
+    display: false,
     subItems: false,
   },
   avatar: {
-    display: true,
+    display: false,
   },
   calendar: {
     display: true,
-    link: "https://cal.com/nyxxintel-xcre0b",
+    link: "https://cal.com/", // 🔁 UPDATE
   },
   intro: {
     display: true,
-    title: "Introduction",
+    title: "Let's Work Together",
     description: (
       <>
-        To empower organizations with actionable threat intelligence, enabling proactive defense strategies, reducing risk, 
-        and safeguarding digital assets from evolving cyber threats. To be the global leader in cybersecurity threat intelligence, 
-        transforming the way businesses understand, anticipate, and combat cyber risks. Our goal is to foster a more secure digital ecosystem,
-        enabling organizations to operate with confidence and resilience.
+        Ready to build your digital presence?
+        <br />
+        Schedule a call and let’s create something impactful together.
       </>
     ),
   },
-  
-
 };
 
-export { person, social, newsletter, home, about, blog, servicesWeOffer, gallery, login };
+export {
+  person,
+  social,
+  newsletter,
+  home,
+  about,
+  blog,
+  servicesWeOffer,
+  gallery,
+  login,
+};
