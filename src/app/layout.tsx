@@ -13,7 +13,7 @@ import { Source_Code_Pro } from "next/font/google";
 import { person, home } from "@/app/resources/content";
 import { Background, Column, Flex, ToastProvider } from "@/once-ui/components";
 
-import { AuthProvider } from "@/components/AuthContext";
+
 
 export async function generateMetadata() {
   return {
@@ -67,7 +67,7 @@ interface RootLayoutProps {
 
 export default async function RootLayout({ children }: RootLayoutProps) {
   return (
-    <AuthProvider>
+
         <Flex
           as="html"
           lang="en"
@@ -158,6 +158,6 @@ export default async function RootLayout({ children }: RootLayoutProps) {
             </Column>
           </ToastProvider>
         </Flex>
-      </AuthProvider>
+        
   );
 }

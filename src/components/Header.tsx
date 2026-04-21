@@ -9,7 +9,7 @@ import styles from "@/components/Header.module.scss";
 import { routes, display } from "@/app/resources";
 import { person, home, about, blog, gallery, login } from "@/app/resources/content";
 import { LanguageSwitcher } from "./language-switcher";
-import { useAuth } from "./AuthContext"; 
+
 
 type TimeDisplayProps = {
   timeZone: string;
@@ -44,8 +44,7 @@ const TimeDisplay: React.FC<TimeDisplayProps> = ({ timeZone, locale = "en-GB" })
 
 export const Header = () => {
   const pathname = usePathname() ?? "";
-  const { isAuthenticated } = useAuth(); // 🔥 Get auth state dynamically
-
+  
   return (
     <>
       <Fade hide="s" fillWidth position="fixed" height="80" zIndex={9} />
@@ -65,7 +64,7 @@ export const Header = () => {
                   <ToggleButton className="s-flex-show" prefixIcon="grid" href="/about" selected={pathname === "/about"} />
                 </>
               )}
-              
+
             </Flex>
           </Flex>
         </Flex>
