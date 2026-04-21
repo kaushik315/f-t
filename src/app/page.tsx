@@ -1,14 +1,9 @@
 import React from "react";
 
-import { Heading, Flex, Text, Button, Avatar, RevealFx, Arrow, Column } from "@/once-ui/components";
-import { Projects } from "@/components/work/Projects";
+import { Heading, Flex, Text, Button, Avatar, RevealFx, Column } from "@/once-ui/components";
 
-import { baseURL, routes } from "@/app/resources";
-import { home, about, person, newsletter } from "@/app/resources/content";
-import { Mailchimp } from "@/components";
-import { Posts } from "@/components/blog/Posts";
-import Script from "next/script";
-import { LanguageSwitcher } from "@/components/language-switcher";
+import { baseURL } from "@/app/resources";
+import { home, about, person } from "@/app/resources/content";
 
 export async function generateMetadata() {
   const title = home.title;
